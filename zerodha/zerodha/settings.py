@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bhavcopy',
+    'zerodha',
+    'django_celery_beat',
+    'django_crontab',
+
 ]
 
 MIDDLEWARE = [
@@ -99,6 +104,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CELERY_TIMEZONE = 'Asia/Calcutta'
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -123,3 +132,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRONJOBS = [
+    ('* * * * *', 'zerodha.cron.my_cron_job'),
+    ('* * * * *', 'bhavcopy.cron.cron_job')
+]
