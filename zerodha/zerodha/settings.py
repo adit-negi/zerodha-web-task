@@ -137,3 +137,10 @@ CRONJOBS = [
     ('* * * * *', 'zerodha.cron.my_cron_job'),
     ('* * * * *', 'bhavcopy.cron.cron_job')
 ]
+
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': 'localhost:6379',
+    },
+}
