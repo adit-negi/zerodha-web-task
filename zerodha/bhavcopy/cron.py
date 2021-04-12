@@ -18,9 +18,7 @@ def cron_job():
                 csvreader = csv.reader(text)
                 for i in csvreader:
                     
-                    a = cache.delete(i[1])
                     cache.set(i[1].strip(), {'code':i[0], 'name':i[1], 'open': i[4], 'high':i[5] , 'low':i[6] , 'close':i[7]})
-                    print(a)
                     print(i)
 
 #'955TMFPERP  '
