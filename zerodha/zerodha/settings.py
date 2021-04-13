@@ -105,8 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CELERY_TIMEZONE = 'Asia/Calcutta'
-CELERY_TASK_TRACK_STARTED = True
-CELERY_TASK_TIME_LIMIT = 30 * 60
+
 
 
 # Internationalization
@@ -134,7 +133,6 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRONJOBS = [
-    ('* * * * *', 'zerodha.cron.my_cron_job'),
     ('* * * * *', 'bhavcopy.cron.cron_job')
 ]
 
@@ -144,7 +142,8 @@ CACHES = {
         "LOCATION": "redis://127.0.0.1:6379",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
+        },
+        'TIMEOUT': 604800
     }
     
 }
