@@ -1,7 +1,7 @@
 # zerodha-web-task
 Initial task for zerodha backend engineer
 
-##set up instructions
+## Set up instructions
 <li>Install python and pip</li>
 <li>git clone</li>
 <li>cd into repo</li>
@@ -18,6 +18,7 @@ Initial task for zerodha backend engineer
    <li>Fetch name specific provided slug</li>
 </li>
 <li>Daily task scheduler/cron built which adds new data every day at 6pm IST</li>
+<li>Search through data in redis</li>
 <li>Due to limitations of free tier I have set redis to timeout at every 7 days</li>
 <li>Added celery queues if tasks get data intensive in future we can run them asynchronously</li>
 
