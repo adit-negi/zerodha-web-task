@@ -139,7 +139,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRONJOBS = [
-    ('* * * * *', 'bhavcopy.cron.cron_job')
+    ('* 6 * * *', 'bhavcopy.cron.cron_job')
 ]
 
 CACHES = {
