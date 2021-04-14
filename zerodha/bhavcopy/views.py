@@ -9,3 +9,12 @@ def search_bhavcopy(request, name):
     result_dict = dict(result)
     values_list = list(result_dict.values())
     return JsonResponse(values_list, safe=False)
+
+def home_page(request):
+    return render(request,'bhavcopy/home.html')
+
+def bhavcopy_all(request):
+    result = cache.get_many(cache.keys("*"))
+    result_dict = dict(result)
+    values_list = list(result_dict.values())
+    return JsonResponse(values_list, safe=False)
