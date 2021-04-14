@@ -14,8 +14,9 @@ Initial task for zerodha backend engineer
 <li>Data is fetched from bhavcopy website https://www.bseindia.com/markets/MarketInfo/BhavCopy.aspx</li>
 <li>Zip file is extracted and stored in REDIS, with the name as key.(Name chosen because it was unique for over 10k records and thus it was reasonable to believe it is always unique)</li>
 <li>API end points built
-   <ul>Fetch all data</ul>
-   <ul>Fetch name specific provided slug</ul>
+   <br>
+   <ul>1. Fetch all data</ul>
+   <ul>2. Fetch name specific provided slug</ul>
 </li>
 <li>Daily task scheduler/cron built which adds new data every day at 6pm IST</li>
 <li>Search through data in redis</li>
