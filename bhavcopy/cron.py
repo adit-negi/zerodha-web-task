@@ -1,4 +1,3 @@
-from .models import *
 from django.core.cache import cache
 from io import BytesIO
 import io
@@ -28,4 +27,5 @@ def cron_job():
                     cache.set(i[1].strip(), {'code':i[0], 'name':i[1], 'open': i[4], 'high':i[5] , 'low':i[6] , 'close':i[7]})
                     print(i)
 
+cron_job()
 #'955TMFPERP  '
