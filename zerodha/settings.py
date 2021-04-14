@@ -145,7 +145,7 @@ CRONJOBS = [
 CACHES = {
     'default': {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379",
+        "LOCATION": "redis://:p527b90fa96c34c6e820314cc12ad66e2055fbafed6d49bc12829d0a1e4cf84a6@ec2-52-203-82-85.compute-1.amazonaws.com:24289",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
